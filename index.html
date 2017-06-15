@@ -130,8 +130,8 @@
 			</article>
 
 		</section>
-		<section id="navprice" onmouseover="hoverButton()" class="price">
-			<div class="price-container">
+		<section id="navprice" class="price">
+			<div onmouseover="hoverButton()" class="price-container">
 				<article>
 					<h2 class="price-container-title">Basic</h2>
 					<h3>$5.01 / Month</h3>
@@ -172,7 +172,35 @@
 
 
 	</main>
+	<footer id="navcontact">
+		<h2>Contact Us</h2>
 
+		<section>
+			<article class="footinf">
+				<h3>Get in touch with us</h3>
+				<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
+				<a class="facebook" href="#"></a>
+				<a class="twitter" href="#"></a>
+				<a class="google" href="#"></a>
+				<p>Posted by Dospel &amp; GanjaParker</p>
+				<p>+XX-XXXX - XXXX - XX</p>
+				<p>info@mail.com</p>
+			</article>
+			<form id="contac">
+				<div class="info">
+					<input class="info-text" type="text" placeholder="Name" title="Any letters and numbers" pattern="[a-zA-Z0-9]+" required="" form="contac" minlength="2">
+					<input class="info-text" type="email" placeholder="EMail" pattern="^[^@]+@[^@.]+\.[^@]+$" title="main@mail.com" required="" form="contac" minlength="2" pattern="@">
+				</div>
+				<textarea class="message" placeholder="Message" minlength="2"></textarea>
+				<div class="submit">
+					<input onclick="validate(this.form)" href="#" type="submit" value="Send" form="contac">
+				</div>
+			</form>
+
+		</section>
+
+
+	</footer>
 	<script src="js/lib/swiper.min.js"></script>
 	<script src="js/user/user.js"></script>
 </body>
