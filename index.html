@@ -22,28 +22,28 @@
 
 
 
-<body>
-	<header id="header">
-		<h1>
-			<a class="logo" href="#">Author</a>
-		</h1>
-		<nav id="myNav" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<div class="overlay-content">
-
-				<a href="#">Home</a>
-				<a href="#">Services</a>
-				<a href="#">Portfolio</a>
-				<a href="#">Team</a>
-				<a href="#">Blog</a>
-				<a href="#">Contact</a>
+<body id="navhome">
+	<header onmouseover="linkpage()" id="header">
+		<div onclick="closemyNav()" class="header-container">
+			<h1>
+				<a class="logo" href="#navhome">Author</a>
+			</h1>
+			<nav id="myNav" class="overlay">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class="overlay-content">
+					<a href="#navhome">Home</a>
+					<a href="#navprice">Services</a>
+					<a href="#">Portfolio</a>
+					<a href="#navteam">Team</a>
+					<a href="#">Blog</a>
+					<a href="#navcontact">Contact</a>
+				</div>
+			</nav>
+			<div class="bar-container" onclick="openNav(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
 			</div>
-
-		</nav>
-		<div class="bar-container" onclick="openNav(this)">
-			<div class="bar1"></div>
-			<div class="bar2"></div>
-			<div class="bar3"></div>
 		</div>
 	</header>
 
@@ -81,7 +81,7 @@
 
 			</div>
 		</section>
-		<section class="team">
+		<section id="navteam" class="team">
 			<h2>The Team</h2>
 			<article>
 
@@ -130,42 +130,42 @@
 			</article>
 
 		</section>
-		<section onmouseover="hoverButton()" class="price">
+		<section id="navprice" onmouseover="hoverButton()" class="price">
 			<div class="price-container">
-			<article>
-				<h2 class="price-container-title">Basic</h2>
-				<h3>$5.01 / Month</h3>
-				<p>Lorem ipsum</p>
-				<p>Dolor sit amet, consect</p>
-				<p>Adipiscing elit</p>
-				<p>Proin commodo turpis</p>
-				<p>lacus pulvinarvel </p>
-				<p>Prnare nisi pretium.</p>
-				<a class="price-container-button" href="#">Buy now</a>
-			</article>
-			<article>
-				<h2 class="price-container-title">Pro</h2>
-				<h3>$10.01 / Month</h3>
-				<p>Lorem ipsum</p>
-				<p>Dolor sit amet, consect</p>
-				<p>Adipiscing elit</p>
-				<p>Proin commodo turpis</p>
-				<p>lacus pulvinarvel </p>
-				<p>Prnare nisi pretium.</p>
-				<a class="price-container-button" href="#">Buy now</a>
-			</article>
-			<article>
-				<h2 class="price-container-title">Premium</h2>
-				<h3>$20.01 / Month</h3>
-				<p>Lorem ipsum</p>
-				<p>Dolor sit amet, consect</p>
-				<p>Adipiscing elit</p>
-				<p>Proin commodo turpis</p>
-				<p>lacus pulvinarvel </p>
-				<p>Prnare nisi pretium.</p>
-				<a class="price-container-button" href="#">Buy now</a>
-			</article>
-</div>
+				<article>
+					<h2 class="price-container-title">Basic</h2>
+					<h3>$5.01 / Month</h3>
+					<p>Lorem ipsum</p>
+					<p>Dolor sit amet, consect</p>
+					<p>Adipiscing elit</p>
+					<p>Proin commodo turpis</p>
+					<p>lacus pulvinarvel </p>
+					<p>Prnare nisi pretium.</p>
+					<a class="price-container-button" href="#">Buy now</a>
+				</article>
+				<article>
+					<h2 class="price-container-title">Pro</h2>
+					<h3>$10.01 / Month</h3>
+					<p>Lorem ipsum</p>
+					<p>Dolor sit amet, consect</p>
+					<p>Adipiscing elit</p>
+					<p>Proin commodo turpis</p>
+					<p>lacus pulvinarvel </p>
+					<p>Prnare nisi pretium.</p>
+					<a class="price-container-button" href="#">Buy now</a>
+				</article>
+				<article>
+					<h2 class="price-container-title">Premium</h2>
+					<h3>$20.01 / Month</h3>
+					<p>Lorem ipsum</p>
+					<p>Dolor sit amet, consect</p>
+					<p>Adipiscing elit</p>
+					<p>Proin commodo turpis</p>
+					<p>lacus pulvinarvel </p>
+					<p>Prnare nisi pretium.</p>
+					<a class="price-container-button" href="#">Buy now</a>
+				</article>
+			</div>
 		</section>
 
 
