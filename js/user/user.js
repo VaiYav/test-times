@@ -23,20 +23,22 @@ function closemyNav() {
 	}
 }
 
-function hoverButton() {
-	var title = document.querySelectorAll('.price-container-title');
-	var button = document.querySelectorAll('.price-container-button');
-	for (let a = 0; a < button.length; a++) {
-		button[a].onmouseover = function () {
-			title[a].style.background = '#49cbcd';
-			button[a].style.background = '#49cbcd'
-		}
-		button[a].onmouseout = function () {
-			title[a].style.background = '#485460';
-			button[a].style.background = '#788492'
-		}
-	}
-}
+//Not working in IE
+//
+//function hoverButton() {
+//	var title = document.querySelectorAll('.price-container-title');
+//	var button = document.querySelectorAll('.price-container-button');
+//	for (let a = 0; a < button.length; a++) {
+//		button[a].onmouseover = function () {
+//			title[a].style.background = '#49cbcd';
+//			button[a].style.background = '#49cbcd'
+//		}
+//		button[a].onmouseout = function () {
+//			title[a].style.background = '#485460';
+//			button[a].style.background = '#788492'
+//		}
+//	}
+//}
 
 function linkpage() {
 	var linkNav = document.querySelectorAll('[href^="#nav"]'),
@@ -66,6 +68,7 @@ function linkpage() {
 	}
 }
 (function () {
+	//	Fixed header
 	var a = document.querySelector('#header'),
 		b = null;
 	window.addEventListener('scroll', Ascroll, false);
@@ -99,5 +102,33 @@ function linkpage() {
 			b.className = '';
 		}
 
+	}
+	//	Hover buttons
+	var container = document.querySelector('.price-container');
+	container.addEventListener("mouseover", getFon);
+	container.addEventListener("mouseout", backFon);
+
+	function getFon(event) {
+		var target = event.target;
+		var button = target.parentNode.querySelector('a');
+		if (target.tagName.toLowerCase() != 'a') {
+			return;
+		}
+		button.style.background = "#49cbcd";
+		var form = event.target;
+		var h2 = form.parentNode.querySelector('.price-container-title');
+		h2.style.background = "#49cbcd";
+	}
+
+	function backFon(event) {
+		var target = event.target;
+		var button = target.parentNode.querySelector('a');
+		if (target.tagName.toLowerCase() != 'a') {
+			return;
+		}
+		button.style.background = "#788492";
+		var form = event.target;
+		var h2 = form.parentNode.querySelector('.price-container-title');
+		h2.style.background = "#485460";
 	}
 })()
